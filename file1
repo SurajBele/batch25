@@ -1,1 +1,11 @@
+ok
+Hello this data[D[D[D[Dis main data
+this is main data
+this is new data
+=======
 Hello this is feature branch data
+<<<<<<< HEAD
+=======
+feature data
+vssdv>>>>>>> feature
+>>>>>>> 188eb9c33b293fda3c766ea54c85cbf6e47ed90e
