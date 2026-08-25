@@ -1,23 +1,13 @@
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 resource "aws_instance" "myec2" {
   ami = var.myami
   instance_type = var.instance_type
-  key_name = "id_rsa"
-  vpc_security_group_ids = [ "sg-0e3db27617e12fa04" ]
+  key_name = var.key_name
+  vpc_security_group_ids = var.mysg
   tags = {
-    name = "myec2"
-    env = "dev"
-    Name = "spider"
+    Name = var.project_name
   }
-}
-
-variable "myami" {
-  default = "ami-0332d564d76dbd8d6"
-  description = "this is us-east-1 ami"
-}
-variable "instance_type" {
-  default = "t3.micro"
 }
