@@ -1,11 +1,9 @@
-asdfaok
+
 Hello this data[D[D[D[Dis main data
 this is main data
 this is new data
 =======
 Hello this is feature branch data
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 feature data
 vssdv>>>>>>> feature
@@ -13,3 +11,7 @@ vssdv>>>>>>> feature
 =======
 feature data
 >>>>>>> parent of db57ac8 ( ok Revert "hello")
+=======
+this is cherry test file1
+
+>>>>>>> 00f01c3 (cherry-pick file added)
