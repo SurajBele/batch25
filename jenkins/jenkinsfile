@@ -18,11 +18,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '/opt/apache-maven-3.10.0/bin/mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-                    -Dsonar.projectKey=myproject \
-                    -Dsonar.projectName='myproject' \
-                    -Dsonar.host.url=http://43.204.238.111:9000 \
-                    -Dsonar.token=sqp_6264a265c933d819de29c0b3d9d39c18f2e18258'
+                withSonarQubeEnv(credentialsId: 'sonar-token') {
+                '/opt/apache-maven-3.10.0/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=myproject -Dsonar.projectName='myproject''
+                }
                 echo "testing successful"
             }
         }
