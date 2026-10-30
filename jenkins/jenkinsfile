@@ -32,6 +32,7 @@ pipeline {
                     waitForQualityGate abortPipeline: true
                 }
                 echo "gate pass successful"
+            }
         }
         stage('Deploy') {
             steps {
